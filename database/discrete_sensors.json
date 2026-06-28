@@ -7,7 +7,7 @@
   "irf540n": {
     "name": "IRF540N N-Channel Power MOSFET (TO-220)",
     "description": "High-current N-Channel Power MOSFET (100V, 33A). Used for switching high power loads from logic pins.",
-    "ascii_art": "\n               \u001b[1mIRF540N TO-220 Front View\u001b[0m\n                  +------------+\n                  |  [ Metal ] |\n                  |  [ Tab   ] |\n                  |------------|\n                  |  \u001b[1mIRF540N\u001b[0m   |\n                  |  \u001b[1mG\u001b[0m   \u001b[1mD\u001b[0m   \u001b[1mS\u001b[0m   |\n                  |  |   |   |   |\n                     1   2   3\n                     \n                Pin 1: \u001b[36mGate\u001b[0m (Trigger)\n                Pin 2: \u001b[36mDrain\u001b[0m (Connected to Load V-)\n                Pin 3: \u001b[36mSource\u001b[0m (Connected to System GND)\n        "
+    "ascii_art": "\n               \u001b[1mIRF540N TO-220 Front View\u001b[0m\n                  +------------+\n                  |  [ Metal ] |\n                  |  [ Tab   ] |\n                  |------------|\n                  |  \u001b[1mIRF540N\u001b[0m   |\n                  |  \u001b[1mG\u001b[0m   \u001b[1mD\u001b[0m   \u001b[1mS\u001b[0m |\n                  |  |   |   | |\n                     1   2   3\n                     \n                Pin 1: \u001b[36mGate\u001b[0m (Trigger)\n                Pin 2: \u001b[36mDrain\u001b[0m (Connected to Load V-)\n                Pin 3: \u001b[36mSource\u001b[0m (Connected to System GND)\n        "
   },
   "hcsr04": {
     "name": "HC-SR04 Ultrasonic Distance Sensor Module",
