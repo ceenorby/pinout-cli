@@ -29,7 +29,7 @@ CHIP_DATABASE = {
         "name": "LM358 Dual Operational Amplifier (PDIP-8)",
         "description": "Low-power dual op-amp. Highly useful because it contains two independent op-amps in a single 8-pin package.",
         "ascii_art": f"""
-  {BOLD}LM358 Top View{RESET}
+      {BOLD}LM358 Top View{RESET}
              +---\\_/---+
      OUT A   | 1     8 | VCC (Single/Dual Supply, 3V to 32V)
      -INPUT A| 2     7 | OUT B
@@ -42,7 +42,7 @@ CHIP_DATABASE = {
         "name": "NE555 Precision Timer IC (PDIP-8)",
         "description": "Highly versatile timer IC used for creating precise clock pulses, delays, and PWM oscillation.",
         "ascii_art": f"""
-    {BOLD}NE555 Top View{RESET}
+      {BOLD}NE555 Top View{RESET}
             +---\\_/---+
          GND| 1     8 | VCC (4.5V to 16V)
      TRIGGER| 2     7 | DISCHARGE
