@@ -16,7 +16,7 @@ CHIP_DATABASE = {
         "name": "LM741 Operational Amplifier (PDIP-8)",
         "description": "Classic single operational amplifier used for analog signal conditioning and filtering.",
         "ascii_art": f"""
-               {BOLD}LM741 Top View{RESET}
+  {BOLD}LM741 Top View{RESET}
             +---\\_/---+
       OFFSET| 1     8 | NC (No Connect)
      - INPUT| 2     7 | V+ (Positive Supply, Max +18V)
@@ -29,7 +29,7 @@ CHIP_DATABASE = {
         "name": "LM358 Dual Operational Amplifier (PDIP-8)",
         "description": "Low-power dual op-amp. Highly useful because it contains two independent op-amps in a single 8-pin package.",
         "ascii_art": f"""
-               {BOLD}LM358 Top View{RESET}
+  {BOLD}LM358 Top View{RESET}
              +---\\_/---+
      OUT A   | 1     8 | VCC (Single/Dual Supply, 3V to 32V)
      -INPUT A| 2     7 | OUT B
@@ -42,7 +42,7 @@ CHIP_DATABASE = {
         "name": "NE555 Precision Timer IC (PDIP-8)",
         "description": "Highly versatile timer IC used for creating precise clock pulses, delays, and PWM oscillation.",
         "ascii_art": f"""
-               {BOLD}NE555 Top View{RESET}
+    {BOLD}NE555 Top View{RESET}
             +---\\_/---+
          GND| 1     8 | VCC (4.5V to 16V)
      TRIGGER| 2     7 | DISCHARGE
@@ -57,7 +57,7 @@ CHIP_DATABASE = {
         "name": "L293D Dual H-Bridge Motor Driver (PDIP-16)",
         "description": "High-current driver designed to control bidirectional speed and direction of up to two DC motors.",
         "ascii_art": f"""
-               {BOLD}L293D Top View{RESET}
+    {BOLD}L293D Top View{RESET}
             +---\\_/---+
      1,2EN  | 1    16 | VCC1 (Logic Supply, 5V)
      1A     | 2    15 | 4A
@@ -74,7 +74,7 @@ CHIP_DATABASE = {
         "name": "74HC595 8-Bit Shift Register (PDIP-16)",
         "description": "Serial-In Parallel-Out shift register. Used to expand limited GPIO pins to control 8 outputs with just 3 MCU pins.",
         "ascii_art": f"""
-               {BOLD}74HC595 Top View{RESET}
+ {BOLD}74HC595 Top View{RESET}
          QB  | 1    16 | VCC (2V to 6V)
          QC  | 2    15 | QA (First Output Bit)
          QD  | 3    14 | SER (Serial Data Input)
@@ -92,7 +92,7 @@ CHIP_DATABASE = {
         "name": "74HC00 Quad 2-Input NAND Gate (PDIP-14)",
         "description": "Four independent NAND gates. A fundamental building block of digital logic systems.",
         "ascii_art": f"""
-               {BOLD}74HC00 Top View{RESET}
+  {BOLD}74HC00 Top View{RESET}
              +---\\_/---+
          1A  | 1    14 | VCC (2V to 6V)
          1B  | 2    13 | 4B
@@ -108,7 +108,7 @@ CHIP_DATABASE = {
         "name": "74HC14 Hex Inverter with Schmitt Trigger (PDIP-14)",
         "description": "Six independent NOT gates with hysteresis, perfect for debouncing switches and squaring up noisy signals.",
         "ascii_art": f"""
-               {BOLD}74HC14 Top View{RESET}
+  {BOLD}74HC14 Top View{RESET}
              +---\\_/---+
          1A  | 1    14 | VCC (2V to 6V)
          1Y  | 2    13 | 6A
@@ -124,7 +124,7 @@ CHIP_DATABASE = {
         "name": "CD4017 CMOS Decade Counter (PDIP-16)",
         "description": "5-stage Johnson decade counter that produces sequential outputs from 0 to 9 on incoming clock pulses.",
         "ascii_art": f"""
-               {BOLD}CD4017 Top View{RESET}
+     {BOLD}CD4017 Top View{RESET}
              +---\\_/---+
          Q5  | 1    16 | VDD (3V to 15V)
          Q1  | 2    15 | RESET (Active High)
@@ -143,7 +143,7 @@ CHIP_DATABASE = {
         "name": "BC547 NPN Bipolar Junction Transistor (TO-92)",
         "description": "General purpose small-signal NPN transistor. Highly used for switching and amplification in labs.",
         "ascii_art": f"""
-               {BOLD}BC547 TO-92 Front View{RESET}
+     {BOLD}BC547 TO-92 Front View{RESET}
                   (Flat Face)
                   .---------.
                  /   {BOLD}BC547{RESET}   \\
@@ -161,7 +161,7 @@ CHIP_DATABASE = {
         "name": "IRF540N N-Channel Power MOSFET (TO-220)",
         "description": "High-current N-Channel Power MOSFET (100V, 33A). Used for switching high power loads from logic pins.",
         "ascii_art": f"""
-               {BOLD}IRF540N TO-220 Front View{RESET}
+ {BOLD}IRF540N TO-220 Front View{RESET}
                   +------------+
                   |  [ Metal ] |
                   |  [ Tab   ] |
@@ -182,7 +182,7 @@ CHIP_DATABASE = {
         "name": "ATmega328P Microcontroller (28-pin PDIP)",
         "description": "High-performance, low-power AVR 8-bit RISC microcontroller used on the Arduino Uno.",
         "ascii_art": f"""
-                                {BOLD}ATmega328P (Top View){RESET}
+                               {BOLD}ATmega328P (Top View){RESET}
                                     +-------\\_/-------+
                 (PCINT14/RESET) PC6 | 1             28 | PC5 (ADC5/SCL/PCINT13)
                   (PCINT16/RXD) PD0 | 2             27 | PC4 (ADC4/SDA/PCINT12)
@@ -205,7 +205,7 @@ CHIP_DATABASE = {
         "name": "ESP32-S3 Raw IC (QFN56 Layout Variant)",
         "description": "Dual-core Xtensa 32-bit LX7 MCU with built-in Wi-Fi and Bluetooth LE. Excellent for IoT and AI-enabled edge hardware.",
         "ascii_art": f"""
-                        {BOLD}ESP32-S3 (Top View Pin-Map Guide){RESET}
+          {BOLD}ESP32-S3 (Top View Pin-Map Guide){RESET}
                       +-------------------------------+
                       | 56 55 54 53 52 51 50 49 48 47 |
               GND  1  | [ ] [ ] [ ] [ ] [ ] [ ] [ ]   | 46  IO9
@@ -230,7 +230,7 @@ CHIP_DATABASE = {
         "name": "NodeMCU ESP8266 Dev Board (ESP-12E)",
         "description": "Massively popular, low-cost Wi-Fi enabled development board. Ideal for basic IoT prototyping.",
         "ascii_art": f"""
-                             {BOLD}NodeMCU ESP8266 (Top View Pinout){RESET}
+                           {BOLD}NodeMCU ESP8266 (Top View Pinout){RESET}
                             +-------------------------------+
                     [ USB ] | [ ] ADC0/A0       [ ] VIN (5V)|
                             | [ ] RSV           [ ] GND     |
@@ -283,7 +283,7 @@ CHIP_DATABASE = {
         "name": "STM32F103C8T6 ARM Cortex-M3 Dev Board ('Blue Pill')",
         "description": "Affordable 32-bit ARM Cortex-M3 microcontroller board. Widely used for teaching professional embedded engineering systems.",
         "ascii_art": f"""
-                            {BOLD}STM32 Blue Pill (Top View Pinout){RESET}
+                    {BOLD}STM32 Blue Pill (Top View Pinout){RESET}
                            +---------------------------------+
                        B12 | [ ]                         [ ] | GND
                        B13 | [ ]                         [ ] | GND
@@ -314,7 +314,7 @@ CHIP_DATABASE = {
         "name": "HC-SR04 Ultrasonic Distance Sensor Module",
         "description": "Non-contact ultrasonic range measurement module (2cm to 400cm range). Uses sonic pulses and echoes.",
         "ascii_art": f"""
-               {BOLD}HC-SR04 Front & Connector View{RESET}
+            {BOLD}HC-SR04 Front & Connector View{RESET}
                +---------------------------------+
                |   [ Transmitter ]   [ Receiver ]|
                |       (T)               (R)     |
@@ -332,7 +332,7 @@ CHIP_DATABASE = {
         "name": "DHT11/DHT22 Temperature & Humidity Sensor",
         "description": "Digital humidity and temperature sensor. Highly used in smart building or agricultural lab setups.",
         "ascii_art": f"""
-               {BOLD}DHT11 / DHT22 (Pins Facing You){RESET}
+             {BOLD}DHT11 / DHT22 (Pins Facing You){RESET}
                      .---------------.
                     | [][][][][][][] |
                     | [][][][][][][] |
