@@ -12,7 +12,7 @@
   "hcsr04": {
     "name": "HC-SR04 Ultrasonic Distance Sensor Module",
     "description": "Non-contact ultrasonic range measurement module (2cm to 400cm range). Uses sonic pulses and echoes.",
-    "ascii_art": "\n               \u001b[1mHC-SR04 Front & Connector View\u001b[0m\n               +---------------------------------+\n               |   [ Transmitter ]   [ Receiver ]|\n               |       (T)               (R)     |\n               +---------------===---+\n                               |||\n                               1234\n                               \n                   Pin 1: \u001b[31mVCC\u001b[0m (+5V DC Input)\n                   Pin 2: \u001b[36mTRIG\u001b[0m (Trigger Input: 10us High pulse starts ping)\n                   Pin 3: \u001b[36mECHO\u001b[0m (Echo Output: Duration of High signal = flight time)\n                   Pin 4: \u001b[1mGND\u001b[0m (System Ground)\n        "
+    "ascii_art": "\n                  \u001b[1mHC-SR04 Front & Connector View\u001b[0m\n               +---------------------------------+\n               |   [ Transmitter ]   [ Receiver ]|\n               |       (T)               (R)     |\n               +---------------===---------------+\n                               |||\n                               1234\n                               \n                   Pin 1: \u001b[31mVCC\u001b[0m (+5V DC Input)\n                   Pin 2: \u001b[36mTRIG\u001b[0m (Trigger Input: 10us High pulse starts ping)\n                   Pin 3: \u001b[36mECHO\u001b[0m (Echo Output: Duration of High signal = flight time)\n                   Pin 4: \u001b[1mGND\u001b[0m (System Ground)\n        "
   },
   "dht11": {
     "name": "DHT11/DHT22 Temperature & Humidity Sensor",
