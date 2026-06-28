@@ -9,11 +9,12 @@ No more waiting for bloated 80-page manufacturer datasheets to download just to 
 - **High-Contrast Terminal Art:** Clean ASCII-mapped chip footprints perfect for CLI environments.
 - **Community Driven:** Easily customizable database—just add a dictionary key to include chips used in your local university labs.
 
+
 ## Installation
-Clone this repository and link the script globally to your system binary path:
+Clone this repository and run the automated installation script:
 
 ```bash
 git clone [https://github.com/ceenorby/pinout-cli.git](https://github.com/ceenorby/pinout-cli.git)
 cd pinout-cli
-chmod +x pinout.py
-sudo ln -s "$(pwd)/pinout.py" /usr/local/bin/pinout
+chmod +x setup.sh
+./setup.sh
