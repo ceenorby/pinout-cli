@@ -77,6 +77,7 @@ CHIP_DATABASE = {
  {BOLD}74HC595 Top View{RESET}
          QB  | 1    16 | VCC (2V to 6V)
          QC  | 2    15 | QA (First Output Bit)
+         QC  | 2    15 | QA (First Output Bit)
          QD  | 3    14 | SER (Serial Data Input)
          QE  | 4    13 | OE (Output Enable, Active Low)
          QF  | 5    12 | RCLK (Storage Latch/Register Clock)
@@ -356,9 +357,38 @@ CHIP_DATABASE["bluepill"] = CHIP_DATABASE["stm32"]
 CHIP_DATABASE["nodemcu"] = CHIP_DATABASE["esp8266"]
 CHIP_DATABASE["hcsr04"] = CHIP_DATABASE["hc-sr04"]
 
+def print_help():
+    """Prints a clean, structured help menu for the user."""
+    print(f"\n{GREEN}{BOLD}pinout-cli — Offline Hardware Pinout Lookup Tool{RESET}")
+    print(f"{BOLD}Usage:{RESET} pinout <chip-name>")
+    print(f"       pinout [options]")
+    
+    print(f"\n{BOLD}Options:{RESET}")
+    print(f"  -h, --help       Show this help message and exit")
+    
+    print(f"\n{BOLD}Available Components In Your Inventory:{RESET}")
+    
+    # Pretty-print available keys in 4 neat columns
+    keys = sorted(list(CHIP_DATABASE.keys()))
+    # Filter out hidden alias entries to prevent redundant duplicates in the list
+    keys = [k for k in keys if k not in ["dht22", "bluepill", "nodemcu", "hcsr04"]]
+    
+    for i in range(0, len(keys), 4):
+        chunk = keys[i:i+4]
+        print("  " + "".join(f"{k:<15}" for k in chunk))
+        
+    print(f"\n{CYAN}💡 Pro-Tip:{RESET} Want to expand the database? Just open up `pinout.py` ")
+    print("and paste a new pin map array inside the `CHIP_DATABASE` dictionary!\n")
+
+
 def search_chip(query):
     query = query.lower().strip().replace("-", "").replace(" ", "")
     
+    # Catch manual requests for help screens
+    if query in ["help", "h", "help"]:
+        print_help()
+        return
+
     # Try finding exact matches by processing the database keys without dashes
     matched_key = None
     for key in CHIP_DATABASE:
@@ -373,30 +403,19 @@ def search_chip(query):
         print(f"{CYAN}Info:{RESET} {chip['description']}")
         print(chip['ascii_art'])
     else:
-        print(f"\n{YELLOW}[!] Chip '{query}' not found in local inventory database.{RESET}")
-        print(f"{BOLD}💡 Available Components Include:{RESET}")
-        
-        # Pretty-print available keys to the student in 4 neat columns
-        keys = sorted(list(CHIP_DATABASE.keys()))
-        # Filter out aliases to prevent duplication in list
-        keys = [k for k in keys if k not in ["dht22", "bluepill", "nodemcu", "hcsr04"]]
-        
-        for i in range(0, len(keys), 4):
-            chunk = keys[i:i+4]
-            print("  " + "".join(f"{k:<15}" for k in chunk))
-        print("\nTo add a new component, open `pinout.py` and append it to `CHIP_DATABASE`!\n")
+        # If the chip is totally wrong, warn them nicely and show the help directory
+        print(f"\n{RED}[!] Error: Component variant '{sys.argv[1]}' is missing or unrecognized.{RESET}")
+        print_help()
+
 
 def main():
+    # Catch empty running argument structures
     if len(sys.argv) < 2:
-        print(f"{BOLD}Usage:{RESET} pinout <chip-name>")
-        print("Example: pinout lm358")
-        sys.exit(1)
+        print_help()
+        sys.exit(0)
         
     query = sys.argv[1]
     search_chip(query)
 
 if __name__ == "__main__":
     main()
-
-
-
